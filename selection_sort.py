@@ -13,17 +13,25 @@ def selection_sort_in_place(arr: list[int]) -> None:
                 arr[j], arr[i] = arr[i], arr[j]
 
 
-def selection_sorted(arr: tuple[int, ...] | list[int]) -> list[int]:
+def selection_sorted(arr: list[int]) -> list[int]:
     """
+    Create copy of the given array and sorting it. Does not change the original array, return new sorted object.
+    Time complexity is O(n^2), n == len(arr)
+    Space complexity is O(n)
+    :param arr: list[int]
+    :return: list[int]
+    """
+    arr_copy = arr.copy()
+    selection_sort_in_place(arr_copy)
+    return arr_copy
 
-    :param arr:
-    :return:
-    """
-    pass
 
 def main():
     """Testing our sorting"""
-    pass
+    assert selection_sorted([-2, 3, -2, -111, 0, 22]) == [-111, -2, -2, 0, 3, 22]
+    assert selection_sorted([-2, 3]) == [-2, 3]
+    assert selection_sorted([3]) == [3]
+    assert selection_sorted([0, -2, 3]) == [-2, 0, 3]
 
 
 if __name__ == '__main__':
