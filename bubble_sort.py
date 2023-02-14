@@ -1,3 +1,7 @@
+from Validators_.sorting_validator import validate_array_of_integers
+
+
+@validate_array_of_integers(parameter='list')
 def bubble_sort_in_place(arr: list[int]) -> None:
     """
     Sorting array in place. Does not create new object.
@@ -12,6 +16,7 @@ def bubble_sort_in_place(arr: list[int]) -> None:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
 
+@validate_array_of_integers(parameter='list')
 def bubble_sorted(arr: list[int]) -> list[int]:
     """
     Create a copy of the given array, sorting it. Does not sort the origin array. It returns sorted copy.
