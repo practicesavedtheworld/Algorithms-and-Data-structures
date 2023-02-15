@@ -1,5 +1,6 @@
 from collections import deque
 from typing import Optional
+from graph_reader import graph_reader
 
 
 def breadth_first_find(path_graph: dict[str, list[str]], looking_for: str) -> Optional[str]:
@@ -13,7 +14,8 @@ def breadth_first_find(path_graph: dict[str, list[str]], looking_for: str) -> Op
     :return: str | None
     """
     persons = deque(['start'])
-    checked_persons, parents = {}, {}
+    checked_persons: dict = {}  # mypy err - Need type annotation for "checked_persons"
+    parents = {}
     while persons:
         person = persons.popleft()
         if not checked_persons.get(person):
@@ -29,16 +31,24 @@ def breadth_first_find(path_graph: dict[str, list[str]], looking_for: str) -> Op
     else:
         print("Path does not exist")
         # raise exptn
-        return
+        return None
     path = deque([looking_for])
-    while parents.get(looking_for):
-        looking_for = parents[looking_for]
-        path.appendleft(looking_for)
+    checked_persons.clear()
+    current_node = parents.get(looking_for)
+    while current_node:
+        if not checked_persons.get(current_node):
+            checked_persons[current_node] = True
+            path.appendleft(current_node)
+            current_node = parents.get(current_node)
+        else:
+            current_node = None
     return ' --> '.join(path)
 
 
 def main():
-    pass
+    graph = graph_reader(start=['B'], B=['K', 'F', 'C', 'D'], D=['start', 'E'], K=[], F=[], C=[])
+    res = breadth_first_find(graph, 'E')
+    assert res == 'start --> B --> D --> E'
 
 
 if __name__ == '__main__':
