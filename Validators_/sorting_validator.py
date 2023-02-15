@@ -13,7 +13,7 @@ P = ParamSpec('P')
 Numbers = int | float | Decimal | complex
 
 
-def validate_array_of_integers(parameter: str = 'list') -> Callable[[Callable[P, T]], Callable[P, T]]:
+def validate_array_of_numbers(parameter: str = 'list') -> Callable[[Callable[P, T]], Callable[P, T]]:
     """
     Based on given parameter validate wrapped function
     parameter can be [list, ]

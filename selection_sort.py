@@ -1,7 +1,7 @@
-from Validators_.sorting_validator import validate_array_of_integers
+from Validators_.sorting_validator import validate_array_of_numbers
 
 
-@validate_array_of_integers(parameter='list')
+@validate_array_of_numbers(parameter='list')
 def selection_sort_in_place(arr: list[int]) -> None:
     """
     Do sort stuff to the given array. The sorting performed in place, so it does not return new array, it returns None
@@ -17,7 +17,7 @@ def selection_sort_in_place(arr: list[int]) -> None:
                 arr[j], arr[i] = arr[i], arr[j]
 
 
-@validate_array_of_integers(parameter='list')
+@validate_array_of_numbers(parameter='list')
 def selection_sorted(arr: list[int]) -> list[int]:
     """
     Create copy of the given array and sorting it. Does not change the original array, return new sorted object.

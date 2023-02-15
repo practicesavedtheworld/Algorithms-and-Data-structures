@@ -1,8 +1,8 @@
 import random
-from Validators_.sorting_validator import validate_array_of_integers
+from Validators_.sorting_validator import validate_array_of_numbers
 
 
-@validate_array_of_integers(parameter='list')
+@validate_array_of_numbers(parameter='list')
 def quick_sorted(array_: list[int], classic: bool = True) -> list[int]:
     """
     Quick sort algorithm that doesn't sort original array, it creates new object based sort it and return.
