@@ -1,3 +1,7 @@
+from Validators_ import graph_validator
+
+
+@graph_validator.validate_graph
 def graph_reader(**kwargs: list[str]) -> dict[str, list[str]]:
     """
     Create a dictionary based on given keyword arguments.

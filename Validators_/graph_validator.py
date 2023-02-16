@@ -2,9 +2,10 @@ from typing import Callable, TypeVar, ParamSpec
 import sys
 import os
 import functools
-sys.path.append(os.path.join(sys.path[0], '..'))
 
+sys.path.append(os.path.join(sys.path[0], '..'))
 from Exceptions_.exceptions_graph import IncorrectStartingNodeName, WrongNeighborsType, WrongInnerType
+
 
 T = TypeVar('T')
 P = ParamSpec('P')
