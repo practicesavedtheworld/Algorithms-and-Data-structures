@@ -1,9 +1,9 @@
-import sys
-import os
-import functools
 from decimal import Decimal
 from pydoc import locate
 from typing import Callable, ParamSpec, TypeVar, get_args
+import functools
+import os
+import sys
 
 sys.path.append(os.path.join(sys.path[0], '..'))
 from Exceptions_.exceptions_sorting import WrongInnerTypeOfArray
