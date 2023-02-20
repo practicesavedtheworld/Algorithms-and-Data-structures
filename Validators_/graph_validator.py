@@ -11,7 +11,7 @@ T = TypeVar('T')
 P = ParamSpec('P')
 
 
-def validate_graph(func: Callable[P, T]) -> T:
+def validate_graph(func: Callable[P, T]) -> Callable[P, T]:
     """
     This validator check parameters of the given func.
     1) Checking first element naming
