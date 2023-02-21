@@ -1,4 +1,4 @@
-from typing import Callable, TypeVar, ParamSpec
+from typing import Callable, TypeVar, ParamSpec, cast
 import functools
 import os
 import re
@@ -59,6 +59,7 @@ def weighted_graph_validator(is_weight_important: bool = True) -> Callable[[Call
                 raise ExcludedFinish
             if is_weight_important:
                 for vertex, weight in kwargs.items():
+                    weight = cast(int | float, weight)
                     if weight < 0:
                         raise NegativeWeightInGraph
                     if not re.fullmatch(r'.+_.+', vertex):
