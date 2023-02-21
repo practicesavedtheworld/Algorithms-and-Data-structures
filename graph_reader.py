@@ -18,6 +18,7 @@ def graph_reader(**kwargs: list[str]) -> dict[str, list[str]]:
     return dependency_graph
 
 
+@graph_validator.weighted_graph_validator(is_weight_important=True)
 def weighted_graph_reader(*all_vertexes: str, **weights: int) -> WeightedGraph:
     """
 
