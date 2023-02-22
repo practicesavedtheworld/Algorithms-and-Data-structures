@@ -56,7 +56,7 @@ def dijkstra(input_graph: WeightedGraph) -> str:
 
 def main():
     graph = weighted_graph_reader('start', 'a', 'b', 'c', 'fin', start_a=10, a_b=20, b_c=1, c_a=1, b_fin=30)
-    print(dijkstra(graph))
+    assert dijkstra(graph) == 'start ---> a ---> b ---> fin'
 
 
 if __name__ == '__main__':
