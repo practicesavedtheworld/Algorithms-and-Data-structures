@@ -6,7 +6,7 @@ import os
 import sys
 
 sys.path.append(os.path.join(sys.path[0], '..'))
-from Exceptions_.exceptions_sorting import WrongInnerTypeOfArray
+from python.exceptions.exceptions_sorting import WrongInnerTypeOfArray
 
 T = TypeVar('T')
 P = ParamSpec('P')

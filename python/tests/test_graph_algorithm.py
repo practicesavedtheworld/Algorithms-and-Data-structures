@@ -3,9 +3,9 @@ import os
 import sys
 
 sys.path.append(os.path.join(sys.path[0], '..'))
-from dijkstra import dijkstra
-from Exceptions_.exceptions_graph import *
-from graph_reader import graph_reader, weighted_graph_reader
+from python.dijkstra import dijkstra
+from python.exceptions.exceptions_graph import *
+from python.graph_reader import graph_reader, weighted_graph_reader
 
 
 class TestGraphReader(unittest.TestCase):

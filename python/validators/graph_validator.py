@@ -5,7 +5,7 @@ import re
 import sys
 
 sys.path.append(os.path.join(sys.path[0], '..'))
-from Exceptions_.exceptions_graph import *
+from python.exceptions.exceptions_graph import *
 
 T = TypeVar('T')
 P = ParamSpec('P')

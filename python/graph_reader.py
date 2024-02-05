@@ -1,6 +1,6 @@
 from collections import namedtuple
 from typing import Optional
-from Validators_ import graph_validator
+from python.validators import graph_validator
 
 WeightedGraph = namedtuple('WeightedGraph', 'graph costs parents')
 

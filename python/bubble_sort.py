@@ -1,4 +1,4 @@
-from Validators_.sorting_validator import validate_array_of_numbers
+from python.validators.sorting_validator import validate_array_of_numbers
 
 
 @validate_array_of_numbers(parameter='list')

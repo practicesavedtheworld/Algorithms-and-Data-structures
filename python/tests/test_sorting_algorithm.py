@@ -5,11 +5,8 @@ import sys
 import unittest
 
 sys.path.append(os.path.join(sys.path[0], '..'))
-from bubble_sort import bubble_sorted
-from find_all_modules import get_all_modules
-from quick_sort import quick_sorted
-from selection_sort import selection_sorted
-from Exceptions_.exceptions_sorting import WrongInnerTypeOfArray
+from python.find_all_modules import get_all_modules
+from python.exceptions.exceptions_sorting import WrongInnerTypeOfArray
 
 
 class TestBubbleSortRealization(unittest.TestCase):
