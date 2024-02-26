@@ -10,12 +10,12 @@ int64_t binary_search2(const int64_t* sorted_arr, const int64_t sorted_arr_lengt
 {
     // [0, 1, 2, 3, 4]  - 4
     int64_t left_side = 0;
-    auto right_side = sorted_arr_length;
+    int64_t right_side = sorted_arr_length;
     // Time complexity - O(log(n))
     // Space complexity - O(1)
     while (left_side < right_side)
     {
-        auto middle = (right_side + left_side) / 2;
+        int64_t middle = (right_side + left_side) / 2;
         auto current_element = sorted_arr[middle];
 
         if (current_element == looking_for) return middle;
