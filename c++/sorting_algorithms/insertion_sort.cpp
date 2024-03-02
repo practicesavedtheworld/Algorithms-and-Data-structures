@@ -1,3 +1,5 @@
+#include "insertion_sort.h"
+
 // Sorting in place, changes array, returns nothing.
 void insertionSort(int array[], int array_size)
 {
