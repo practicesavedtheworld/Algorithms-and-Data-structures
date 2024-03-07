@@ -5,7 +5,7 @@
 namespace RadixSort
 {
 
-    u_int8_t getBitCount(u_int64_t number)
+    u_int8_t getBitCount(int16_t number)
     {
         u_int8_t bit_count = 0;
         while (number > 0)
