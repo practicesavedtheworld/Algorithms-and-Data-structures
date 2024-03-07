@@ -18,6 +18,7 @@ namespace RadixSort
 
     void radixSort(int16_t arr[], size_t arr_size, int16_t max_element)
     {
+        if (arr_size < 2) return;
 
         // Time complexity: O(N * log(MaxElement))
         // Space complexity: O(N)
