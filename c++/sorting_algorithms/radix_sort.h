@@ -9,7 +9,8 @@ namespace RadixSort
     /* Radix sort idea is to sort the elements based on their bit values.
     I will use 2 groups for 0 and 1 bit values. Then compare every radix
     group with the 1/0 bit. Next step will be to update base array with
-    group values. It'll be like: [0, 0, 0, 1, 1, 1, 1, 1] => [0, 0, 0, 1, 1, 1, 1, 1]
+    group values. It'll be like: [el, el, el, el, el, el, el, el] => [0, 0, 0, 1, 1, 1, 1, 1]
+    0 and 1 means element in 0 or 1 groups.
     It continues until I don't pass through last radix.
     Working result: [2, 100, 1, 783, 4, 31, 0, -34] => [-34, 0, 1, 2, 4, 31, 100, 783]
     */
