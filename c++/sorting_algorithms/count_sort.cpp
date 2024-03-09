@@ -5,7 +5,8 @@
 namespace CountSort
 {
     // Using ordered map
-    void countSort(int64_t *arr, size_t arr_size) {
+    void countSort(int64_t *arr, size_t arr_size)
+    {
         //  Time complexity: O(n)
         //  Space complexity: O(n)
         std::map<int64_t, int64_t> number_counter;
@@ -14,7 +15,7 @@ namespace CountSort
             auto current_element = arr[i];
             if (number_counter.find(current_element) != number_counter.end())
             {
-                number_counter[current_element] += 1;
+                number_counter[current_element]++;
             }
             else number_counter[current_element] = 1;
         }
